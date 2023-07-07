@@ -22,7 +22,7 @@ function AdminAuth(to, from, next) {
         Authorization: "Bearer " + localStorage.getItem("token")
       }
     }
-    axios.post("http://localhost:8686/api/validate", {}, req).then(res => {
+    axios.post("https://barberapi-db08894f5bfd.herokuapp.com/api/validate", {}, req).then(res => {
       console.log(res);
       next()
     }).catch(err => {
@@ -40,7 +40,7 @@ function ClientAuth(to, from, next) {
         Authorization: "Bearer " + localStorage.getItem("token")
       }
     }
-    axios.post("http://localhost:8686/api/validate", {}, req).then(res => {
+    axios.post("https://barberapi-db08894f5bfd.herokuapp.com/api/validate", {}, req).then(res => {
       console.log(res);
       next()
     }).catch(err => {
